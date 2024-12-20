@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Assistance App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+            overflow: hidden;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+            transform: translateY(-50%);
+            animation: slideUp 1s ease-out forwards;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #ff4d4d;
+            font-weight: 700;
+            margin-bottom: 15px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out 0.3s forwards;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #bbb;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out 0.6s forwards;
+        }
+
+        .button-container {
+            margin-top: 30px;
+        }
+
+        .emergency-button {
+            background: #e53946;
+            color: #fff;
+            border: none;
+            padding: 18px 25px;
+            border-radius: 12px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .emergency-button:hover {
+            background: #ff1744;
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .emergency-button:active {
+            transform: scale(1.05);
+            background: #d32f2f;
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 0.95rem;
+            color: #bbb;
+        }
+
+        .footer a {
+            color: #ff4d4d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .emergency-button {
+                font-size: 1.2rem;
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Emergency Assistance</h1>
+            <p>Click below to send an SOS signal. Help is on the way!</p>
+        </div>
+
+        <div class="button-container">
+            <button class="emergency-button">Send SOS Signal</button>
+        </div>
+
+        <div class="footer">
+            <p>Stay calm. <a href="#">Learn More</a></p>
+        </div>
+    </div>
+</body>
+</html>
